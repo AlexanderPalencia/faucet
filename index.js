@@ -23,7 +23,7 @@ async function myFunction(){
             DOMAddError.hidden = false;
         }else{
             msg = encodeURIComponent(msg.trim());
-            let uri = `http://localhost:3000/faucet?add=${address}&msg=${msg}`;
+            let uri = `https://us-central1-faucet-api-nem.cloudfunctions.net/app/faucet?add=${address}&msg=${msg}`;
             fetch(uri)
             .then(response => response.json())
             .then(jsonObj => {
