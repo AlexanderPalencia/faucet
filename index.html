@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Faucet Alex</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="description" content="Faucet NEM Tesnet">
+        <meta name="keywords" content="NEM,Faucet,Nem Tesnet">
+        <meta name="author" content="Alexander Palencia">
+        <link rel="stylesheet" href="w3.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="index.js"></script>
+    </head>
+    <body>
+        
+        <div class="w3-container w3-border w3-display-middle w3-round-large" id="mainBody">
+        
+            <div class="w3-container">
+                <h2>Faucet NEM for the Testnet</h2>
+            </div>
+            
+            <div class="w3-container w3-border w3-border-blue w3-round w3-card w3-center w3-margin-bottom w3-padding-24">
+                <form class="w3-container">
+                    <input class="w3-input" type="text" id="add" placeholder="Account address">
+                    <input class="w3-input" type="text" id="msg"placeholder="Message">
+                </form>
+                <button class="w3-button w3-hover-light-blue w3-round-large w3-border w3-border-indigo w3-margin-top" id="myBtn" onclick="myFunction()">Send</button>
+            </div>
+
+            <button onclick="Accordion('Demo1')" class="w3-button w3-hover-light-blue w3-round-large w3-border w3-border-indigo w3-margin-bottom">
+                How to use it
+            </button> 
+            
+            <div id="Demo1" class="w3-container w3-hide w3-margin-bottom">
+
+                <ul class="w3-ul">
+                    <li>
+                        Enter a valid address for NEM testnet, this must start with T and does not have to contain -.
+                    </li>
+                    <li>
+                        You can claim up to 200 XEM (randomly) every 5 min.
+                    </li>
+                    <li>
+                        Do not abusive claims.
+                    </li>
+                    <li>
+                        You can send a message in the transaction.
+                    </li>
+                </ul>
+
+            </div>
+
+            <button onclick="Accordion('Demo2')" class="w3-button w3-hover-light-blue w3-round-large w3-border w3-border-indigo w3-margin-bottom">
+                Send XEM Back
+            </button>
+
+            <div id="Demo2" class="w3-container w3-hide">
+                <p>Please send back the XEM to:</p>
+                <p>TCNTQNAK3SW5A2JU3FO7BBN44TMJK3X77JODMDC3</p>
+            </div>
+            <!-- Divs info -->
+            <div class="w3-panel w3-green w3-card" id="succ" hidden>
+                Succes Transaction!<br>
+                Amount: <label id="amount">Info Transaction</label> <br>
+                To a Address: <label id="toadd">Info Transaction</label>
+            </div> 
+            <div class="w3-panel w3-card w3-red" id="addError" hidden>
+                    Invalid address, please correct it
+            </div>
+            <div class="w3-panel w3-card w3-red" id="timeError" hidden>
+                    Error Time:<br>
+                    <label id="timeMsg">Time Transaction</label>
+            </div> 
+            <div class="w3-panel w3-card w3-red" id="error" hidden>
+                    Error: <label id="errorCode">Info Transaction</label> <br>
+                    Description:<label id="erroMsg">Info Transaction</label>
+            </div> 
+        </div>
+        <div class="w3-container" id="tablediv">
+            <h3>Transaction Table</h3>
+            <table class="w3-table w3-striped" id="table">
+            </table>
+        </div>
+        <div class="w3-display-bottomright">
+            Develop by: Alexander Palencia
+        </div>
+    </body>
+</html>
