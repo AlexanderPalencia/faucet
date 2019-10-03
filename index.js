@@ -57,7 +57,7 @@ async function myFunction(){
                         DOMAmount.innerText = jsonObj.amount;
                         DOMToAdd.innerText = jsonObj.recipient;
                         DOMSucc.hidden = false;
-                        setTimeout(init, 180000)
+                        setTimeout(init, 72000)
                     }
                 }
             });
